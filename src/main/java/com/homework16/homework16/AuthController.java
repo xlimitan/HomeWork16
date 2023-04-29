@@ -18,7 +18,7 @@ public class AuthController {
     public String auth(@RequestParam("login") String login, @RequestParam("pass") String pass, @RequestParam("confirmPass") String confirmPass) {
         try {
             authServer.checkAuth(login, pass, confirmPass);
-            return "Все хорошо";
+            return "Все хорошо!";
         } catch (WrongLoginException | WrongPassException e) {
             return "Проверка не пройдена";
         }
