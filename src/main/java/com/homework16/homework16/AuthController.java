@@ -20,7 +20,7 @@ public class AuthController {
             authServer.checkAuth(login, pass, confirmPass);
             return "Все хорошо!";
         } catch (WrongLoginException | WrongPassException e) {
-            return "Проверка не пройдена!";
+            return "Проверка не пройдена!!";
         }
     }
 }
