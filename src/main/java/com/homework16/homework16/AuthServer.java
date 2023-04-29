@@ -8,10 +8,10 @@ public class AuthServer {
 
 
     public void checkAuth(String login, String pass, String confirmPass) throws WrongLoginException, WrongPassException {
-        if (!login.matches(REGEX)) || login.length() > 20) {
+        if (!login.matches(REGEX) || login.length() > 20) {
             throw new WrongLoginException("Логин не правильный");
         }
-        if (!pass.matches(REGEX)) || pass.length() > 20 || !pass.equals(confirmPass)) {
+        if (!pass.matches(REGEX) || pass.length() > 20 || !pass.equals(confirmPass)) {
             throw new WrongPassException();
         }
     }
